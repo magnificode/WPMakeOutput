@@ -15,3 +15,5 @@
 
 # Questions
 What are these tools providing us over just straight webpack?
+ - It's worth keeping gulp... I've been playing with webpack and it's set up to add styles directly through JS. There is a way to process using webpack and then use an extraction system to pull it out into a file. In general, gulp is setting up for a super modularized web-app. We are some steps away from that. -LW
+ - The other thing that gulp gives us is the ability to run other things through gulp, such as a task to run testing. A task for running a clean build. These are some of the features of the old version that we _probably_ shouldn't just kill, but interested to chat about it. -LW
