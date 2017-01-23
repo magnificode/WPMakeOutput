@@ -20,3 +20,12 @@ What are these tools providing us over just straight webpack?
 	- I agree that keeping gulp is a good tool for use and will help users ramp up quicker on the tools. - NS
  - The other thing that gulp gives us is the ability to run other things through gulp, such as a task to run testing. A task for running a clean build. These are some of the features of the old version that we _probably_ shouldn't just kill, but interested to chat about it. -LW
 	- This is kinda the only other reason for keeping these commands - NS
+
+# Thoughts from 1/23
+Stick to NPM scripts
+* How do we manage localization files?
+  * [WP-Pot](https://www.npmjs.com/package/wp-pot)
+* Store Config files in a directory
+  * This will simplify the directory structure
+* How do we deal with styles and Webpack
+  * Need separate files for the styles
