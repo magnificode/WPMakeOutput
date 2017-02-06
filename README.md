@@ -24,8 +24,22 @@ What are these tools providing us over just straight webpack?
 # Thoughts from 1/23
 Stick to NPM scripts
 * How do we manage localization files?
-  * [WP-Pot](https://www.npmjs.com/package/wp-pot)
+	* [WP-Pot](https://www.npmjs.com/package/wp-pot)
 * Store Config files in a directory
-  * This will simplify the directory structure
+	* This will simplify the directory structure
 * How do we deal with styles and Webpack
-  * Need separate files for the styles
+	* Need separate files for the styles
+
+# Thoughts from 2/6
+Allen - Limited use of Webpack
+* Remove the requirement for JSCS
+* Compiling - performance of build tools.
+* Using Webpack
+	* Need to have alternative use cases and suggestions.
+	* Need to have defined ways of doing things
+* Touched on config folder again - needs to be one place where everything lives.
+	* This can be configured via the entry-point for most task-runner API.
+	* Point of this is to make it easy to understand
+* Should we track configs in their own repository or should they be outside?
+	* If they are in - they should conform to WP
+	* If they are in their own repo - they don't have to.
