@@ -43,3 +43,11 @@ Allen - Limited use of Webpack
 * Should we track configs in their own repository or should they be outside?
 	* If they are in - they should conform to WP
 	* If they are in their own repo - they don't have to.
+
+
+# Thoughts from 2/27
+	Allen - Use Webpack please.... :face_with_rolling_eyes:
+	* Remove the requirement for JSCS
+	* Remove Build command?
+	* Maybe move to component based configs
+	* Allen to start with a theme build
