@@ -19,7 +19,7 @@ gulp.task( 'postcss', function( cb ) {
 	const fileSrc = [
 			'./assets/css/admin-style.css',
 			'./assets/css/editor-style.css',
-			'./assets/css/shared-style.css'
+			'./assets/css/shared-style.css',
 			'./assets/css/style.css'
 		],
 		fileDest = './dist/css',

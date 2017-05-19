@@ -9,12 +9,12 @@
 // Global - global pieces like media queries, mixins and placholders
 @import 'global/index';
 
+// Vendor - vendor styles - should be imported here so we can override them
+@import 'vendor/index';
+
 // Base - base styles such as fonts, typography, and wordpress overrides
 // as well as some global micro-elements like icons
 @import 'base/index';
-
-// Vendor - vendor styles - should be imported here so we can override them
-@import 'vendor/index';
 
 // Layout - styles specific to layout
 @import 'layout/index';

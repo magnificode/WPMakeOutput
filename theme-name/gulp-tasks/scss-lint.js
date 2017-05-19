@@ -14,12 +14,11 @@ import scssLint from 'gulp-scss-lint';
  * @returns {void}
  */
 gulp.task( 'scss-lint', ( cb ) => {
-	const fileSrc = ['./assets/scss/**/*.scss'],
+	const fileDest = './reports',
+		fileSrc = ['./assets/scss/**/*.scss'],
 		taskOpts = {
-			config: './node_modules/eslint-config-allenmoore/.scss-lint.yml'
-			endless: true,
-			reporterOutput: './reports/scss-lint-report.json',
-			verbose: true
+			config: './node_modules/scsslint-config-allenmoore/.scss-lint.yml',
+			endless: true
 		};
 
 	pump( [

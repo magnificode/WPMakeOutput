@@ -1,6 +1,5 @@
-import cssnano from 'cssnano';
+import cssnano from 'gulp-cssnano';
 import gulp from 'gulp';
-import postcss from 'gulp-postcss';
 import pump from 'pump';
 import rename from 'gulp-rename';
 import sourcemaps from 'gulp-sourcemaps';
@@ -27,12 +26,12 @@ gulp.task( 'cssnano', function( cb ) {
 			calc: {
 				precision: 8
 			},
-			filterPlugins: false
+			convertValues: true
 		} )];
 
 	pump( [
 		gulp.src( fileSrc ),
-		postcss( taskOpts ),
+		cssnano(),
 		rename( function( path ) {
 			path.extname = '.min.css'
 		} ),
