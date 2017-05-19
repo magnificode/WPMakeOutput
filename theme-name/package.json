@@ -1,0 +1,61 @@
+{
+  "name": "project-name",
+  "version": "1.0.0",
+  "description": "Project Description",
+  "homepage": "https://project-domain.tld",
+  "repository": {
+    "type": "git",
+    "url": "https://project-git-repo.tld"
+  },
+  "author": {
+    "name": "10up",
+    "email": "info@10up.com",
+    "url": "https://10up.com",
+    "role": "developer"
+  },
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development gulp webpack --progress",
+    "build": "cross-env NODE_ENV=production gulp webpack --progress"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "babel-loader": "^7.0.0",
+    "babel-preset-env": "^1.4.0",
+    "babelify": "^7.3.0",
+    "browserify": "^14.3.0",
+    "cross-env": "^5.0.0",
+    "css-loader": "^0.28.1",
+    "cssnano": "^3.10.0",
+    "eslint": "^3.19.0",
+    "eslint-config-allenmoore": "^2.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "file-loader": "^0.11.1",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-buffer": "0.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-eslint": "^3.0.1",
+    "gulp-foreach": "^0.1.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-postcss": "^7.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sass-glob": "^1.0.8",
+    "gulp-scss-lint": "^0.4.0",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-svgmin": "^1.2.4",
+    "gulp-svgstore": "^6.1.0",
+    "gulp-uglify": "^2.1.2",
+    "gulp-util": "^3.0.8",
+    "gulp-watch": "^4.3.11",
+    "postcss-cssnext": "^2.11.0",
+    "pump": "^1.0.2",
+    "require-dir": "^0.3.1",
+    "run-sequence": "^1.2.2",
+    "sass-loader": "^6.0.5",
+    "scsslint-config-allenmoore": "^1.0.0",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "webpack": "^2.5.1"
+  }
+}

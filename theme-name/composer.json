@@ -1,0 +1,29 @@
+{
+  "name": "project-name",
+  "description": "Project description.",
+  "version": "0.1.0",
+  "type": "wordpress-theme",
+  "keywords": [],
+  "license": "MIT",
+  "authors": [{
+    "name": "10up",
+    "email": "info@10up.com",
+    "homepage": "https://10up.com",
+    "role": "developer"
+  }],
+  "autoload": {
+    "psr-4": {
+      "ProjectName\\": "includes"
+    },
+    "classmap": [
+      "includes/path/to/file.php"
+    ],
+    "files": [
+      "includes/template-tags.php"
+    ]
+  },
+  "minimum-stability": "dev",
+  "require": {
+    "composer/installers": "~1.0"
+  }
+}
