@@ -1,14 +1,13 @@
 import webpack from 'webpack';
 import path from 'path';
-import glob from 'glob';
 
 const DIST_PATH = path.resolve('./dist');
 
 module.exports = {
 	entry: {
-      admin: glob.sync( './assets/js/admin/**/*.js' ),
-      frontend: glob.sync( './assets/js/frontend/**/*.js' ),
-      shared: glob.sync( './assets/js/shared/**/*.js' )
+      admin: './assets/js/admin/admin.js',
+      frontend: './assets/js/frontend/frontend.js',
+      shared: './assets/js/shared/shared.js'
   },
 	output: {
 		path: __dirname,
