@@ -4,11 +4,21 @@ import runSequence from 'run-sequence';
 
 requireDir( './gulp-tasks' );
 
-gulp.task( 'default', () => {
+/**
+ * Gulp task to run all SVG processes in a sequenctial order.
+ *
+ * @method
+ * @author   Dominic Magnifico, 10up
+ * @requires gulp
+ * @requires runSequence
+ * @returns  {void}
+*/
+gulp.task( 'js', () => {
 	runSequence(
 		'webpack'
 	)
 } );
+
 //
 // /**
 //  * Gulp task to run all SVG processes in a sequenctial order.
