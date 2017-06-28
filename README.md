@@ -46,28 +46,28 @@ Allen - Limited use of Webpack
 
 
 # Thoughts from 2/27
-	Allen - Use Webpack please.... :face_with_rolling_eyes:
-	* Remove the requirement for JSCS
-	* Remove Build command?
-	* Maybe move to component based configs
-	* Allen to start with a theme build
+Allen - Use Webpack please.... :face_with_rolling_eyes:
+* Remove the requirement for JSCS
+* Remove Build command?
+* Maybe move to component based configs
+* Allen to start with a theme build
 
 # Thoughts from 6/23
-	- What are our desired task runner features?
-		- SCSS
-			- Minify
-			- Globbing?
-			- Concat
-			- Autoprefixer
-			- Lint?
-			- PostCSS
-		- JS
-			- Uglify / Minify
-			- Concat
-			- ES6
-			- Lint
-		- SVG
-			- Optimization
-			- Generate Sprite
-		- Workflow
-			- Live Reload
+- What are our desired task runner features?
+	- SCSS
+		- [ ] Minify
+		- [ ] Globbing?
+		- [ ] Concat
+		- [ ] Autoprefixer
+		- [ ] Lint?
+		- [ ] PostCSS
+	- JS
+		- [x] Uglify / Minify
+		- [x] Concat
+		- [x] ES6
+		- [x] Lint
+	- SVG
+		- [ ] Optimization
+		- [ ] Generate Sprite
+	- Workflow
+		- [ ] Live Reload
