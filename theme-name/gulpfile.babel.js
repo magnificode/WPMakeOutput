@@ -39,26 +39,24 @@ gulp.task( 'js', () => {
 // 	)
 // } );
 //
-// /**
-//  * Gulp task to run all Sass/CSS processes in a sequenctial order.
-//  *
-//  * @method
-//  * @author   Allen Moore, 10up
-//  * @example  <caption>Example usage of the gulp css task.</caption>
-//  * // returns void
-//  * gulp css
-//  * @requires gulp
-//  * @requires runSequence
-//  * @returns  {void}
-//  */
-// gulp.task( 'css', () => {
-// 	runSequence(
-// 		'scss-lint',
-// 		'sass',
-// 		'postcss',
-// 		'cssnano'
-// 	)
-// } );
+/**
+ * Gulp task to run all Sass/CSS processes in a sequenctial order.
+ *
+ * @method
+ * @author   Allen Moore, 10up
+ * @requires gulp
+ * @requires runSequence
+ * @returns  {void}
+*/
+gulp.task( 'css', () => {
+	runSequence(
+		// 'scss-lint',
+		'sass',
+		'postcss',
+		'cssnano'
+	)
+} );
+
 //
 // /**
 //  * Gulp task to run all JavaScript processes in a sequenctial order.
