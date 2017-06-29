@@ -1,7 +1,6 @@
 import gulp from 'gulp';
 import pump from 'pump';
 import webpack from 'webpack-stream';
-import source from 'vinyl-source-stream';
 
 // Webpack
 function processWebpack( src, conf, dest ) {
