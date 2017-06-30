@@ -1,6 +1,5 @@
 import gulp from 'gulp';
 import postcss from 'gulp-postcss';
-import sassGlob from 'gulp-sass-glob';
 import pump from 'pump';
 
 /**
@@ -35,7 +34,6 @@ gulp.task( 'cssnext', function( cb ) {
 
 	pump( [
 		gulp.src( fileSrc ),
-		sassGlob(),
 		postcss( taskOpts ),
 		gulp.dest( fileDest )
 	], cb );
