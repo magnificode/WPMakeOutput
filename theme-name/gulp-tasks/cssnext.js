@@ -29,8 +29,8 @@ gulp.task( 'cssnext', function( cb ) {
 			}
 		}
 		const taskOpts = [
-			require('postcss-import')(),
-			require('postcss-cssnext')( cssNextOpts )
+			require( 'postcss-import' ),
+			require( 'postcss-cssnext' )( cssNextOpts )
 		];
 
 	pump( [
