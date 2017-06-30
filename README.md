@@ -55,12 +55,13 @@ Allen - Use Webpack please.... :face_with_rolling_eyes:
 # Thoughts from 6/23
 - What are our desired task runner features?
 	- SCSS
-		- [ ] Minify
-		- [ ] Globbing?
-		- [ ] Concat
-		- [ ] Autoprefixer
-		- [ ] Lint?
-		- [ ] PostCSS
+		- [x] Minify
+		- ~~[ ] Globbing?~~
+		- [x] Concat
+		- [x] Autoprefixer
+		- [ ] Lint
+		- [x] PostCSS
+		- [x] CSS Next
 	- JS
 		- [x] Uglify / Minify
 		- [x] Concat
