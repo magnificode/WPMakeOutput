@@ -1,8 +1,8 @@
-import cssnano from 'gulp-cssnano';
 import gulp from 'gulp';
-import pump from 'pump';
+import cssnano from 'gulp-cssnano';
 import rename from 'gulp-rename';
 import sourcemaps from 'gulp-sourcemaps';
+import pump from 'pump';
 
 /**
  * Gulp task to run the cssnano task.
@@ -16,8 +16,7 @@ import sourcemaps from 'gulp-sourcemaps';
 gulp.task( 'cssnano', function( cb ) {
 	const fileDest = './dist/css',
 		fileSrc = [
-			'./dist/css/**/*.css',
-			'!./dist/css/**/*.min.css'
+			'./assets/css/src/**/*.css'
 		],
 		taskOpts = [cssnano( {
 			autoprefixer: false,
