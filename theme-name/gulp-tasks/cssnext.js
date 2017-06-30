@@ -13,7 +13,7 @@ import pump from 'pump';
  * @returns {void}
 */
 
-gulp.task( 'sass', function( cb ) {
+gulp.task( 'cssnext', function( cb ) {
 	const fileSrc = [
 			'./assets/css/admin/admin-style.css',
 			'./assets/css/frontend/editor-style.css',
