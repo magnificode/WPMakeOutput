@@ -51,8 +51,7 @@ gulp.task( 'js', () => {
 gulp.task( 'css', () => {
 	runSequence(
 		// 'scss-lint',
-		'sass',
-		'postcss',
+		'cssnext',
 		'cssnano'
 	)
 } );
