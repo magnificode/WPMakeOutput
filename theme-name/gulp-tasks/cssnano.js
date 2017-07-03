@@ -3,6 +3,8 @@ import cssnano from 'gulp-cssnano';
 import rename from 'gulp-rename';
 import sourcemaps from 'gulp-sourcemaps';
 import pump from 'pump';
+import livereload from 'gulp-livereload';
+import filter from 'gulp-filter';
 
 /**
  * Gulp task to run the cssnano task.
@@ -36,6 +38,8 @@ gulp.task( 'cssnano', ( cb ) => {
 			loadMaps: true
 		} ),
 		sourcemaps.write( './' ),
-		gulp.dest( fileDest )
+		gulp.dest( fileDest ),
+		filter('**/*.css'),
+		livereload()
 	], cb );
 } );
