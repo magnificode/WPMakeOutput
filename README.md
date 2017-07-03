@@ -56,7 +56,7 @@ Allen - Use Webpack please.... :face_with_rolling_eyes:
 - What are our desired task runner features?
 	- SCSS
 		- [x] Minify
-		- ~~[ ] Globbing?~~
+		- [ ] ~~Globbing?~~
 		- [x] Concat
 		- [x] Autoprefixer
 		- [ ] Lint
