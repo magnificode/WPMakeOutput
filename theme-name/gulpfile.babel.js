@@ -15,7 +15,7 @@ requireDir( './gulp-tasks' );
 */
 gulp.task( 'js', () => {
 	runSequence(
-		'webpack'
+		'webpack',
 	)
 } );
 
@@ -48,70 +48,45 @@ gulp.task( 'js', () => {
  * @requires runSequence
  * @returns  {void}
 */
-gulp.task( 'css', () => {
+gulp.task( 'css', ( callback ) => {
 	runSequence(
 		// 'scss-lint',
-		'cssnext',
-		'cssnano'
+		['cssnext', 'cssnano'],
+		callback
 	)
 } );
 
-//
-// /**
-//  * Gulp task to run all JavaScript processes in a sequenctial order.
-//  *
-//  * @method
-//  * @author   Allen Moore, 10up
-//  * @example  <caption>Example usage of the gulp js task.</caption>
-//  * // returns void
-//  * gulp js
-//  * @requires gulp
-//  * @requires runSequence
-//  * @returns  {void}
-//  */
-// gulp.task( 'js', () => {
-// 	runSequence(
-// 		'eslint',
-// 		'javascript',
-// 		'concat',
-// 		'uglify'
-// 	)
-// } );
-//
-// /**
-//  * Gulp task to watch for file changes and run the associated processes.
-//  *
-//  * @method
-//  * @author   Allen Moore, 10up
-//  * @example  <caption>Example usage of the gulp watch task.</caption>
-//  * // returns void
-//  * gulp watch
-//  * @requires gulp
-//  * @requires watch
-//  * @returns  {void}
-//  */
-// gulp.task( 'watch', () => {
-// 	gulp.watch( './assets/scss/**/*.scss', ['css'] );
-// 	gulp.watch( './assets/js/**/*.js', ['js'] );
-// 	gulp.watch( './assets/svg/**/*.svg', ['svg'] );
-// } );
-//
-// /**
-//  * Gulp task to run the default build processes in a sequenctial order.
-//  *
-//  * @method
-//  * @author   Allen Moore, 10up
-//  * @example  <caption>Example usage of the default gulp task.</caption>
-//  * // returns void
-//  * gulp
-//  * @requires gulp
-//  * @requires runSequence
-//  * @returns  {void}
-//  */
-// gulp.task( 'default', () => {
-// 	runSequence(
-// 		'svg',
-// 		'css',
-// 		'js'
-// 	);
-// } );
+/**
+ * Gulp task to watch for file changes and run the associated processes.
+ *
+ * @method
+ * @author   Dominic Magnifico, 10up
+ * @example  gulp watch
+ * @requires gulp
+ * @requires watch
+ * @returns  {void}
+ */
+gulp.task( 'watch', () => {
+	gulp.watch( ['./assets/css/**/*.css', '!./assets/css/src/**/*.css'], ['css'] );
+	gulp.watch( './assets/js/**/*.js', ['js'] );
+} );
+
+/**
+ * Gulp task to run the default build processes in a sequenctial order.
+ *
+ * @method
+ * @author   Dominic Magnifico, 10up
+ * @example  <caption>Example usage of the default gulp task.</caption>
+ * // returns void
+ * gulp
+ * @requires gulp
+ * @requires runSequence
+ * @returns  {void}
+ */
+gulp.task( 'default', () => {
+	runSequence(
+		// 'svg',
+		'css',
+		'webpack'
+	);
+} );
