@@ -8,12 +8,12 @@ import pump from 'pump';
  * Gulp task to run the cssnano task.
  *
  * @method
- * @author Allen Moore, 10up
+ * @author Dominic Magnifico, 10up
  * @example gulp cssnano
  * @param   {Function} cb the pipe sequence that gulp should run.
  * @returns {void}
- */
-gulp.task( 'cssnano', function( cb ) {
+*/
+gulp.task( 'cssnano', ( cb ) => {
 	const fileDest = './dist/css',
 		fileSrc = [
 			'./assets/css/src/**/*.css'
