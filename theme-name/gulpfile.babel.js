@@ -1,6 +1,7 @@
 import gulp from 'gulp';
 import requireDir from 'require-dir';
 import runSequence from 'run-sequence';
+import livereload from 'gulp-livereload';
 
 requireDir( './gulp-tasks' );
 
@@ -43,16 +44,17 @@ gulp.task( 'js', () => {
  * Gulp task to run all Sass/CSS processes in a sequenctial order.
  *
  * @method
- * @author   Allen Moore, 10up
+ * @author   Dominic Magnifico, 10up
  * @requires gulp
  * @requires runSequence
  * @returns  {void}
 */
-gulp.task( 'css', ( callback ) => {
+gulp.task( 'css', () => {
 	runSequence(
 		// 'scss-lint',
-		['cssnext', 'cssnano'],
-		callback
+		// ['cssnext', 'cssnano'],
+		'cssnext',
+		'cssnano'
 	)
 } );
 
@@ -67,6 +69,7 @@ gulp.task( 'css', ( callback ) => {
  * @returns  {void}
  */
 gulp.task( 'watch', () => {
+	livereload.listen( { basePath: 'dist' } );
 	gulp.watch( ['./assets/css/**/*.css', '!./assets/css/src/**/*.css'], ['css'] );
 	gulp.watch( './assets/js/**/*.js', ['js'] );
 } );
