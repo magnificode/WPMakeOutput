@@ -11,7 +11,6 @@ import pump from 'pump';
  * @param   {Function} cb the pipe sequence that gulp should run.
  * @returns {void}
 */
-
 gulp.task( 'cssnext', ( cb ) => {
 	const fileSrc = [
 			'./assets/css/admin/admin-style.css',
