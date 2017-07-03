@@ -71,4 +71,4 @@ Allen - Use Webpack please.... :face_with_rolling_eyes:
 		- [ ] Optimization
 		- [ ] Generate Sprite
 	- Workflow
-		- [ ] Live Reload
+		- [x] Live Reload
