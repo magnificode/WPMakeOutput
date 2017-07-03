@@ -2,13 +2,23 @@ import gulp from 'gulp';
 import pump from 'pump';
 import webpack from 'webpack-stream';
 
-// Webpack
-function processWebpack( src, conf, dest ) {
-	return gulp.src( src )
-	.pipe( webpack( require( conf ) ) )
-	.pipe( gulp.dest( dest ) )
+function processWebpack( src, conf, dest, cb ) {
+	pump( [
+		gulp.src( src ),
+		webpack( require( conf ) ),
+		gulp.dest( dest )
+	], cb );
 }
 
+/**
+ * Gulp task to run the webpack task.
+ *
+ * @method
+ * @author Dominic Magnifico, 10up
+ * @example gulp webpack
+ * @param   {Function} cb the pipe sequence that gulp should run.
+ * @returns {void}
+*/
 gulp.task( 'webpack', () => {
 	const srcJs = './assets/js/**/*.js';
 	const conf = '../webpack.config.babel.js'
