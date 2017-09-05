@@ -13,3 +13,9 @@
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
+	<?php
+	/**
+	 * Custom action to provide entry point
+	 * for items such as GPT tags.
+	 */
+	do_action( 'after_body' ); ?>
