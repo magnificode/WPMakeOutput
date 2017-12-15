@@ -16,13 +16,12 @@
   "scripts": {
     "dev": "gulp --require babel-register",
     "devserver": "gulp --require babel-register watch",
-    "build": "NODE_ENV=production gulp build --require babel-register"
+    "build": "NODE_ENV=production gulp --require babel-register"
   },
   "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.25.0",
     "babel-eslint": "^7.2.3",
-    "babel-loader": "^7.1.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-register": "^6.26.0",
     "caniuse-db": "^1.0.30000696",
