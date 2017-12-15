@@ -14,8 +14,9 @@
     "role": "developer"
   },
   "scripts": {
-    "dev": "gulp watch",
-    "build": "gulp"
+    "dev": "gulp --require babel-register",
+    "devserver": "gulp --require babel-register watch",
+    "build": "NODE_ENV=production gulp build --require babel-register"
   },
   "license": "MIT",
   "devDependencies": {
