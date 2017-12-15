@@ -14,21 +14,20 @@ module.exports = {
 		filename: './[name].min.js'
 	},
 	module: {
-		preLoaders: [
+		rules: [
 			{
 				test: /\.js$/,
+				enforce: 'pre',
 				exclude: [/(node_modules)/, DIST_PATH],
 				loader: 'eslint-loader',
 				options: {
 					configFile: './.eslintrc'
 				}
-			}
-		],
-		loaders: [
+			},
 			{
 				test: /\.js$/,
 				exclude: /(node_modules)/,
-				loader: 'babel',
+				loader: 'babel-loader',
 				query: {
 					presets: ['es2015']
 				}
