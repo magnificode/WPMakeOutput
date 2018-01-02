@@ -20,26 +20,6 @@ gulp.task( 'js', () => {
 	)
 } );
 
-//
-// /**
-//  * Gulp task to run all SVG processes in a sequenctial order.
-//  *
-//  * @method
-//  * @author   Allen Moore, 10up
-//  * @example  <caption>Example usage of the gulp svg task.</caption>
-//  * // returns void
-//  * gulp svg
-//  * @requires gulp
-//  * @requires runSequence
-//  * @returns  {void}
-//  */
-// gulp.task( 'svg', () => {
-// 	runSequence(
-// 		'svgmin',
-// 		'svgstore'
-// 	)
-// } );
-//
 /**
  * Gulp task to run all Sass/CSS processes in a sequenctial order.
  *
@@ -80,15 +60,12 @@ gulp.task( 'watch', () => {
  * @method
  * @author   Dominic Magnifico, 10up
  * @example  <caption>Example usage of the default gulp task.</caption>
- * // returns void
- * gulp
  * @requires gulp
  * @requires runSequence
  * @returns  {void}
  */
 gulp.task( 'default', () => {
 	runSequence(
-		// 'svg',
 		'css',
 		'webpack'
 	);
