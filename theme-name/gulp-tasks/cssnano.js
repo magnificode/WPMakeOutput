@@ -18,7 +18,7 @@ import filter from 'gulp-filter';
 gulp.task( 'cssnano', ( cb ) => {
 	const fileDest = './dist/css',
 		fileSrc = [
-			'./assets/css/src/**/*.css'
+			'./assets/css/src/*.css'
 		],
 		taskOpts = [cssnano( {
 			autoprefixer: false,
@@ -39,7 +39,7 @@ gulp.task( 'cssnano', ( cb ) => {
 		} ),
 		sourcemaps.write( './' ),
 		gulp.dest( fileDest ),
-		filter('**/*.css'),
+		filter( '**/*.css' ),
 		livereload()
 	], cb );
 } );
