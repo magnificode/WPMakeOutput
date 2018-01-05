@@ -17,7 +17,7 @@ requireDir( './gulp-tasks' );
 gulp.task( 'js', () => {
 	runSequence(
 		'webpack',
-	)
+	);
 } );
 
 /**
@@ -32,8 +32,9 @@ gulp.task( 'js', () => {
 gulp.task( 'css', () => {
 	runSequence(
 		'cssnext',
-		'cssnano'
-	)
+		'cssnano',
+		'cssclean'
+	);
 } );
 
 /**
