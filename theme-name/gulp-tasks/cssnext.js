@@ -1,5 +1,6 @@
 import gulp from 'gulp';
 import postcss from 'gulp-postcss';
+import rename from 'gulp-rename';
 import pump from 'pump';
 
 /**
@@ -18,7 +19,7 @@ gulp.task( 'cssnext', ( cb ) => {
 		'./assets/css/frontend/style.css',
 		'./assets/css/shared/shared-style.css'
 	];
-	const fileDest = './assets/css/src';
+	const fileDest = './dist';
 	const cssNextOpts = {
 		features: {
 			autoprefixer: {

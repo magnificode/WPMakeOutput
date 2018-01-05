@@ -18,7 +18,7 @@ import filter from 'gulp-filter';
 gulp.task( 'cssnano', ( cb ) => {
 	const fileDest = './dist/css',
 		fileSrc = [
-			'./assets/css/src/*.css'
+			'./dist/*.css'
 		],
 		taskOpts = [cssnano( {
 			autoprefixer: false,
@@ -32,7 +32,7 @@ gulp.task( 'cssnano', ( cb ) => {
 		gulp.src( fileSrc ),
 		cssnano(),
 		rename( function( path ) {
-			path.extname = '.min.css'
+			path.extname = '.min.css';
 		} ),
 		sourcemaps.init( {
 			loadMaps: true
