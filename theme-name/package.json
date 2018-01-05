@@ -25,6 +25,7 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-register": "^6.26.0",
     "caniuse-db": "^1.0.30000696",
+    "del": "^3.0.0",
     "eslint": "^4.1.1",
     "eslint-loader": "^1.8.0",
     "gulp": "^3.9.1",
