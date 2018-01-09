@@ -1,5 +1,6 @@
 import gulp from 'gulp';
 import postcss from 'gulp-postcss';
+import rename from 'gulp-rename';
 import pump from 'pump';
 
 /**
@@ -13,23 +14,23 @@ import pump from 'pump';
 */
 gulp.task( 'cssnext', ( cb ) => {
 	const fileSrc = [
-			'./assets/css/admin/admin-style.css',
-			'./assets/css/frontend/editor-style.css',
-			'./assets/css/frontend/style.css',
-			'./assets/css/shared/shared-style.css'
-		];
-		const fileDest = './assets/css/src';
-		const cssNextOpts = {
-			features: {
-				autoprefixer: {
-					browsers: ['last 2 versions']
-				}
+		'./assets/css/admin/admin-style.css',
+		'./assets/css/frontend/editor-style.css',
+		'./assets/css/frontend/style.css',
+		'./assets/css/shared/shared-style.css'
+	];
+	const fileDest = './dist';
+	const cssNextOpts = {
+		features: {
+			autoprefixer: {
+				browsers: ['last 2 versions']
 			}
 		}
-		const taskOpts = [
-			require( 'postcss-import' ),
-			require( 'postcss-cssnext' )( cssNextOpts )
-		];
+	};
+	const taskOpts = [
+		require( 'postcss-import' ),
+		require( 'postcss-cssnext' )( cssNextOpts )
+	];
 
 	pump( [
 		gulp.src( fileSrc ),
