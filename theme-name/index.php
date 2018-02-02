@@ -2,7 +2,7 @@
 /**
  * The main template file
  *
- * @package Project Name
+ * @package Chewbacca
  * @since 0.1.0
  */
 
