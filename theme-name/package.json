@@ -16,7 +16,8 @@
   "scripts": {
     "dev": "gulp",
     "devserver": "gulp watch",
-    "build": "NODE_ENV=production gulp"
+    "build": "NODE_ENV=production gulp",
+    "deploy": ""
   },
   "license": "MIT",
   "devDependencies": {
