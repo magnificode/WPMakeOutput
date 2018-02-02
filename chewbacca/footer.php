@@ -2,7 +2,7 @@
 /**
  * The template for displaying the footer.
  *
- * @package Project Name
+ * @package Chewbacca
  * @since 0.1.0
  */
 ?>
