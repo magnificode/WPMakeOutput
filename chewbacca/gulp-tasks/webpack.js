@@ -24,6 +24,6 @@ function processWebpack( src, conf, dest, cb ) {
 gulp.task( 'webpack', () => {
 	const srcJs = './assets/js/**/*.js';
 	const conf = '../webpack.config.babel.js'
-	const fileDest = './dist/js';
+	const fileDest = './';
 	processWebpack( srcJs, conf, fileDest );
 } );

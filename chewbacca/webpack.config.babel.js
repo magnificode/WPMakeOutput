@@ -2,6 +2,7 @@ import webpack from 'webpack';
 import path from 'path';
 
 const DIST_PATH = path.resolve('./dist');
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 
 module.exports = {
 	entry: {
@@ -37,9 +38,13 @@ module.exports = {
 	plugins: [
 		// Avoid publishing files when compilation failed:
 		new webpack.NoEmitOnErrorsPlugin(),
-		new webpack.optimize.UglifyJsPlugin( {
-			output: { comments: false },
-		} ),
+		new UglifyJSPlugin({
+			uglifyOptions: {
+				output: {
+					comments: false,
+				}
+			}
+		})
 	],
 	stats: { colors: true },
 };
