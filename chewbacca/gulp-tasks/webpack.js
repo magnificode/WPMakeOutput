@@ -1,12 +1,13 @@
 import gulp from 'gulp';
 import pump from 'pump';
-import webpack from 'webpack-stream';
+import webpack from 'webpack';
+import webpackStream from 'webpack-stream';
 import livereload from 'gulp-livereload';
 
 function processWebpack( src, conf, dest, cb ) {
 	pump( [
 		gulp.src( src ),
-		webpack( require( conf ) ),
+		webpackStream( require( conf ), webpack ),
 		gulp.dest( dest ),
 		livereload()
 	], cb );
@@ -22,8 +23,8 @@ function processWebpack( src, conf, dest, cb ) {
  * @returns {void}
 */
 gulp.task( 'webpack', () => {
-	const srcJs = './assets/js/**/*.js';
-	const conf = '../webpack.config.babel.js'
-	const fileDest = './dist/js';
-	processWebpack( srcJs, conf, fileDest );
+	const src = '../assets/js/**/*.js';
+	const conf = '../webpack.config.babel.js';
+	const dest = './dist/js';
+	processWebpack( src, conf, dest );
 } );
