@@ -11,7 +11,7 @@ module.exports = {
 	},
 	output: {
 		path: __dirname,
-		filename: './[name].min.js'
+		filename: './dist/js/[name].min.js'
 	},
 	module: {
 		rules: [

@@ -1,1 +1,5 @@
-//import foo from './components/bar'
+const button = document.getElementById( 'myButton' );
+
+button.addEventListener( 'click', () => {
+	console.log( 'CLICK' );
+} );
